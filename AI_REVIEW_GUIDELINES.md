@@ -47,7 +47,7 @@ Modularity & Readability
 •	Use 4-space indentation
 •	Avoid overly clever or compressed code
 •	Avoid complex syntax
-
+•	Proper branch naming
 •	Have some default values in a separate file
 •	Remove unused code wherever not used to ensure maintainability
 •	Stick with single quote or double quote for strings
@@ -56,24 +56,27 @@ Modularity & Readability
 
 Efficiency & Optimization
 •	The code should be well optimized
-o	Use efficient data structures and algorithms a Optimize memory (e.g., yield )
-o	Use concurrency/parallels where applicable a Use caching for API responses
+    o	Use efficient data structures and algorithms
+    o Optimize memory (e.g., yield )
+    o	Use concurrency/parallels where applicable
+    o Use caching for API responses
 •	Use list comprehensions
 •	Use generators for large data
 •	Avoid unnecessary memory usage with some objects like client connections
- 
 •	Use enunenate( instead of range(ien( . ..
-
 •	Use zip( to iterate multiple sequences
 •	Use tuple unpacking ( a, b - b, a )
 •	while building APIs response time in crucial, efficient caching must be used without bloating the memory, possible things needs to be pre computed on server start.
 •	If any two I/O bound tasks can be executed concurrently, should be executed concurrently.
 •	If any two intense compuations can be executed parallely, should be decided to execute parallely or not considering the time to spawn new process
-lmmutability
+
+Immutability
 •	Use tuples, mapping proxy, frozenset, frozen pydantic models where applicable.
+
 Pydantic Usage
 •	Strong validations with LaTieId va idator , L‹node vaI idator .
-ResourceB Import Handling
+
+Resource & Import Handling
 •	Use aim statement for resource management
 •	Avoid using *mport •
 •	Always use named arguments
@@ -81,7 +84,6 @@ ResourceB Import Handling
 •	Group imports: standard — third-party — local
 •	Have order for import statements: in-built — installed —' project modules
 •	Specified package should be present in poetry
-
 
 Function Design
 •	All functions including private functions should be strongly typed
@@ -91,16 +93,13 @@ Function Design
 •	Avoid too many parameters
 •	Use early returns to reduce nesting
 
-
 Testing
 •	Test cases should include expected behaviour, error handling, and corner cases
 •	Write unit tests for critical paths
 •	Use fixtures for setup/teardown
-
+•   Use parametrizations
 •	Tests should be readable and maintainable
-
 •	Mock external systems
-
 
 Logging & Debugging
 •	Give meaningful error in user end, as we don't need these detailed errors, but we need the original error logged with full trace, use ioggen. exeept ton
@@ -108,13 +107,10 @@ Logging & Debugging
 •	If FastAPl server, run in DEBUG (reload)
 •	Have good log messages
 
-
 Environment & Setup
 •	Add default env in . env. exampIe wherever applicable
 •	Avoid quotes and spaces in env to compatible with docker env
 •	Add Dockerfile and docker-compose for easy setup in developer end
-
-
 
 •	Use auto code formatters
 •	Triple quotes are for multiline comments —avoid them for short ones
