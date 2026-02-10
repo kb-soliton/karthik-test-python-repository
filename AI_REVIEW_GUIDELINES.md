@@ -51,22 +51,23 @@ Modularity & Readability
 •	Have some default values in a separate file
 •	Remove unused code wherever not used to ensure maintainability
 •	Stick with single quote or double quote for strings
-•	This indentation should ^" 9^Od— keep line length per PEP or use new lines per argument
+•	This indentation should be good — keep line length per PEP or use new lines per argument
 •	Use keyword arguments to improve code readability.
+•   Use spell checker extension
 
 Efficiency & Optimization
 •	The code should be well optimized
     o	Use efficient data structures and algorithms
-    o Optimize memory (e.g., yield )
+    o   Optimize memory (e.g., yield )
     o	Use concurrency/parallels where applicable
-    o Use caching for API responses
+    o   Use caching for API responses
 •	Use list comprehensions
 •	Use generators for large data
 •	Avoid unnecessary memory usage with some objects like client connections
-•	Use enunenate( instead of range(ien( . ..
-•	Use zip( to iterate multiple sequences
-•	Use tuple unpacking ( a, b - b, a )
-•	while building APIs response time in crucial, efficient caching must be used without bloating the memory, possible things needs to be pre computed on server start.
+•	Use enunenate() instead of range(ien(...))
+•	Use zip() to iterate multiple sequences
+•	Use tuple unpacking ( a, b = b, a )
+•	while building APIs response time in crucial, efficient caching must be used without bloating the memory, possible things need to be pre computed on server start.
 •	If any two I/O bound tasks can be executed concurrently, should be executed concurrently.
 •	If any two intense compuations can be executed parallely, should be decided to execute parallely or not considering the time to spawn new process
 
@@ -74,15 +75,15 @@ Immutability
 •	Use tuples, mapping proxy, frozenset, frozen pydantic models where applicable.
 
 Pydantic Usage
-•	Strong validations with LaTieId va idator , L‹node vaI idator .
+•	Strong validations with @field_validator, @model_validator
 
 Resource & Import Handling
-•	Use aim statement for resource management
-•	Avoid using *mport •
+•	Use with statement for resource management
+•	Avoid using import *
 •	Always use named arguments
 •	Remove unused imports
 •	Group imports: standard — third-party — local
-•	Have order for import statements: in-built — installed —' project modules
+•	Have order for import statements: in-built — installed — project modules
 •	Specified package should be present in poetry
 
 Function Design
@@ -102,16 +103,17 @@ Testing
 •	Mock external systems
 
 Logging & Debugging
-•	Give meaningful error in user end, as we don't need these detailed errors, but we need the original error logged with full trace, use ioggen. exeept ton
-•	Configure log level with 0Eeus as default, so developer can easily debug in development and use logger to log errors.
-•	If FastAPl server, run in DEBUG (reload)
+•	Give meaningful error in user end, as we don't need these detailed errors, but we need the original error logged with full trace, use logger.exception
+•	Configure log level with DEBUG as default, so developer can easily debug in development and use logger to log errors.
+•	If FastAPI server, run in DEBUG (reload)
 •	Have good log messages
 
 Environment & Setup
-•	Add default env in . env. exampIe wherever applicable
+•	Add default env in .env.example wherever applicable
 •	Avoid quotes and spaces in env to compatible with docker env
 •	Add Dockerfile and docker-compose for easy setup in developer end
 
+Code Formatting & Style
 •	Use auto code formatters
-•	Triple quotes are for multiline comments —avoid them for short ones
+•	Triple quotes are for multiline comments — avoid them for short ones
 •	Make small (atomic) commits whenever possible
